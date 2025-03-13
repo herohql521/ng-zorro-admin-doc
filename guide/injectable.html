@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>依赖注入 | ng-zorro-admin</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/ng-zorro-admin-doc/favicon.ico">
+    <meta name="description" content="A magical angular admin">
+    
+    <link rel="preload" href="/ng-zorro-admin-doc/assets/css/0.styles.8efae98b.css" as="style"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/app.d8b87182.js" as="script"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/2.93c2c88f.js" as="script"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/16.f635ef53.js" as="script"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/10.dc4ac0c5.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/11.f9a235ba.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/12.31231088.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/13.cf41425c.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/14.3bfdc0b1.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/15.3add68da.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/17.3ca0746d.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/18.bf5a3795.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/19.272a7fab.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/20.7b14d97d.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/21.78a19862.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/3.4d0f4e78.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/4.4a47a965.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/5.57a5bf32.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/6.91e3552f.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/7.cafa4535.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/8.6b412f3d.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/9.65956be5.js">
+    <link rel="stylesheet" href="/ng-zorro-admin-doc/assets/css/0.styles.8efae98b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ng-zorro-admin-doc/" class="home-link router-link-active"><!----> <span class="site-name">ng-zorro-admin</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ng-zorro-admin-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="功能" class="dropdown-title"><span class="title">功能</span> <span class="arrow down"></span></button> <button type="button" aria-label="功能" class="mobile-dropdown-title"><span class="title">功能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/rich-editor/" class="nav-link">
+  富文本
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/go2top/" class="nav-link">
+  返回顶部
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/lodashjs/" class="nav-link">
+  lodashjs
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/utils/" class="nav-link">
+  utils
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ng-zorro-admin-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="功能" class="dropdown-title"><span class="title">功能</span> <span class="arrow down"></span></button> <button type="button" aria-label="功能" class="mobile-dropdown-title"><span class="title">功能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/rich-editor/" class="nav-link">
+  富文本
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/go2top/" class="nav-link">
+  返回顶部
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/lodashjs/" class="nav-link">
+  lodashjs
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/utils/" class="nav-link">
+  utils
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ng-zorro-admin-doc/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/ng-zorro-admin-doc/guide/layout.html" class="sidebar-link">布局</a></li><li><a href="/ng-zorro-admin-doc/guide/newPage.html" class="sidebar-link">新增页面</a></li><li><a href="/ng-zorro-admin-doc/guide/style.html" class="sidebar-link">样式</a></li><li><a href="/ng-zorro-admin-doc/guide/login.html" class="sidebar-link">登陆</a></li><li><a href="/ng-zorro-admin-doc/guide/authority.html" class="sidebar-link">权限验证</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ng-zorro-admin-doc/guide/injectable.html" aria-current="page" class="active sidebar-link">依赖注入</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#概念理解" class="sidebar-link">概念理解</a></li><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#多层级注入器-moduleinjector-与-elementinjector" class="sidebar-link">多层级注入器 ModuleInjector 与 ElementInjector</a></li><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#angular-中的依赖注入使用方式" class="sidebar-link">Angular 中的依赖注入使用方式</a></li><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#修饰符" class="sidebar-link">修饰符</a></li><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#提供商" class="sidebar-link">提供商</a></li><li class="sidebar-sub-header"><a href="/ng-zorro-admin-doc/guide/injectable.html#ng-zorro-源码和-angular-官方文档的最佳实践" class="sidebar-link">ng-zorro 源码和 Angular 官方文档的最佳实践</a></li></ul></li><li><a href="/ng-zorro-admin-doc/guide/content.html" class="sidebar-link">内容映射</a></li><li><a href="/ng-zorro-admin-doc/guide/reference.html" class="sidebar-link">引用类型</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="依赖注入"><a href="#依赖注入" class="header-anchor">#</a> 依赖注入</h1> <p>依赖注入(Dependency Injection) 有时候也被叫做 <code>控制反转(IOC)</code>, 简称DI。<a href="https://angular.cn/guide/hierarchical-dependency-injection" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="概念理解"><a href="#概念理解" class="header-anchor">#</a> 概念理解</h2> <p>先看个例子：我们希望在通知组件(NotificationComponent)中通过消息服务(MessageService)发送一条消息。</p> <p>如果不使用依赖注入的话，我们的代码大概长这样：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">msg</span><span class="token operator">:</span> MessageService<span class="token punctuation">;</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>msg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MessageService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">sendMsg</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">msgType</span><span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">info</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>msgType<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>使用依赖注入时：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">msg</span><span class="token operator">:</span> MessageService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment">// Angular 中注入依赖的方式</span>
+  <span class="token function">sendMsg</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">msgType</span><span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">info</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>msgType<span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>代码的行数变少了</li> <li>NotificationComponent 与 MessageService 间的耦合性降低了</li></ul> <p>那么现在，我们再来谈谈依赖注入。</p> <p>不过在说依赖注入之前，我们需要知道有个概念叫做 <code>控制反转</code>，简单来说它和依赖注入间的区别就是：</p> <ul><li>依赖注入是一种编程技巧</li> <li>控制反转是一种设计思想</li></ul> <p>回顾上面例子，我们在 NotificationComponent 的构造函数中引入了 MessageService 并手动实例化，在第二个例子中，我们并没有对实例化这部分做操作，或者说我们把实例化这部分流程交给了外层框架。这种将 <b>依赖的控制权从代码的内部转移到代码的外部</b> 就叫控制反转。</p> <h2 id="多层级注入器-moduleinjector-与-elementinjector"><a href="#多层级注入器-moduleinjector-与-elementinjector" class="header-anchor">#</a> 多层级注入器 ModuleInjector 与 ElementInjector</h2> <p><img src="https://angular.cn/generated/images/guide/dependency-injection/injectors.svg" alt="alt"></p> <p><b>ModuleInjector：</b> 通过 @NgModule() 或者 @Injectable() 配置</p> <p><b>ElementInjector：</b> 通过 @Directive() 或 @Component() 中的 providers 属性中配置</p> <h3 id="_1-moduleinjector"><a href="#_1-moduleinjector" class="header-anchor">#</a> 1.ModuleInjector</h3> <p>这部分比较重要的是：</p> <ul><li><code>Injectable()</code> 的 providedIn 属性是要高于<code>@NgModule()</code> 的 providers 数组</li> <li>当使用 <code>Injectable()</code> 的 providedIn 属性时，优化工具可以做摇树优化 tree-shaking，比如 providedIn: 'root'</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// xxxx.service.ts @Injectable装饰器来告诉系统这个类(服务)是可注入的</span>
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">providedIn</span><span class="token operator">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MessageService</span> <span class="token punctuation">{</span>
+  
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//xxx.module.ts</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+<span class="token literal-property property">providers</span><span class="token operator">:</span><span class="token punctuation">[</span>MessageService <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="_2-elementinjector"><a href="#_2-elementinjector" class="header-anchor">#</a> 2.ElementInjector</h3> <p>对于 ElementInjector 来说比较重要的是：</p> <ul><li>如果在 NotificationComponent 中声明了 MessageService ，那么每个 NotificationComponent 中都会有一个自己的 MessageService 实例。</li></ul> <h2 id="angular-中的依赖注入使用方式"><a href="#angular-中的依赖注入使用方式" class="header-anchor">#</a> Angular 中的依赖注入使用方式</h2> <ul><li>掌握 @Optional()，@Self()，@SkipSelf()，@Host() 修饰符的含义</li> <li>熟悉 ClassProvider，ValueProvider，FactoryProvider 使用方法</li> <li>掌握预定义的 token 与多提供商的巧妙使用</li></ul> <p>很多 Angular开发者，可能不知道如下的常用写法其实是种简写。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Inject <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MessageService <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@service/message.service'</span><span class="token punctuation">;</span>
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-notification'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./notification.component.html'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrls</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./notification.component.less'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+ 
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> <span class="token literal-property property">service</span><span class="token operator">:</span> MessageService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+  <span class="token comment">//实际上是如下简写</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span> <span class="token parameter">@<span class="token function">Inject</span><span class="token punctuation">(</span>MessageService<span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token literal-property property">service</span><span class="token operator">:</span> MessageService</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+ 
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="修饰符"><a href="#修饰符" class="header-anchor">#</a> 修饰符</h2> <p>可以使用 @Optional()，@Self()，@SkipSelf() 和 @Host() 来修饰 Angular 的解析行为。从 @angular/core 导入它们，并在注入服务时在组件类构造函数中使用它们。</p> <p>Angular 文档中帮助我们对解析修饰符做了分类：</p> <ul><li>如果 Angular 找不到想要的东西怎么办：@Optional()</li> <li>到哪里开始寻找，用@SkipSelf()</li> <li>到哪里停止寻找，用 @Host() 和 @Self()</li></ul> <p>我们还是通过几个示例来掌握 Angular 中常用的解析修饰符 @Optional()，@Self()，@SkipSelf()，@Host() ，并且试试组合起来的效果吧。</p> <h3 id="_1-optional"><a href="#_1-optional" class="header-anchor">#</a> 1.@Optional()</h3> <p>这表示该服务是可选的，有时候我们引入的服务是不一定存在的，或者说用户不一定会在提供商中配置注入器。</p> <p>基本的示例：</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Injectable</span><span class="token punctuation">(</span>
+  <span class="token comment">// 注释这段代码，这样在通知组件中就无法找到 MessageService</span>
+  <span class="token comment">// { providedIn: 'root' }</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MessageService</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'msg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Angular 提示我们没有 MessageService 的 provider</p> <p><img src="https://pic1.zhimg.com/80/v2-7b9da922c0c20cdafbbc43dcc9636f08_720w.jpg" alt="alt"></p> <p>添加 @Optional() 修饰符之后</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-notification'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./notification.component.html'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrls</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./notification.component.less'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token literal-property property">msg</span><span class="token operator">:</span> MessageService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><img src="https://pic3.zhimg.com/80/v2-21ac71e0f0dce6e9093b834ad5447ea6_720w.jpg" alt="alt"></p> <p>我们可以看到报错信息有了变化，Angular 将 msg 置为 null，这就是 @Optional() 的作用：</p> <blockquote><p>@Optional() 允许 Angular 将您注入的服务视为可选服务。这样，如果无法在运行时解析它，Angular 只会将服务解析为 null，而不会抛出错误</p></blockquote> <p>如果你写的业务很简单，你可能很少会用这个修饰符，但是如果你写的是组件库，你就不可避免的需要这个修饰符。例如在 ng-zorro NzAutocompleteComponent 组件中，就有对 noAnimation 的可选修饰（@Host 修饰符接下来就会提到）。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">constructor</span><span class="token punctuation">(</span>
+    <span class="token comment">// ...</span>
+    @<span class="token function">Host</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> noAnimation<span class="token operator">?</span><span class="token operator">:</span> NzNoAnimationDirective
+<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>当使用 noAnimation 时都会判断是否存在</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+  <span class="token attr-name">#panel</span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ant-select-dropdown ant-select-dropdown-placement-bottomLeft<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">[class.ant-select-dropdown-hidden]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>!showPanel<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">[nzNoAnimation]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>noAnimation?.nzNoAnimation<span class="token punctuation">&quot;</span></span>
+  <span class="token attr-name">[@.disabled]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>noAnimation?.nzNoAnimation<span class="token punctuation">&quot;</span></span>
+<span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_2-self"><a href="#_2-self" class="header-anchor">#</a> 2.@Self</h3> <p>使用 @Self 让 Angular 仅查看当前组件或指令的 ElementInjector</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-notification'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./notification.component.html'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrls</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./notification.component.less'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Self</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token literal-property property">msg</span><span class="token operator">:</span> MessageService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>由于指明了 Angular 仅查看 Notification 组件，所以会出现如下的错误信息：</p> <p><img src="https://pic2.zhimg.com/80/v2-e4b2ed3490ad606d1368bea6ead58cbd_720w.jpg" alt="alt"></p> <p>这样在组件内提供服务就不会出错了</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-notification'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./notification.component.html'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrls</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./notification.component.less'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+      <span class="token literal-property property">useClass</span><span class="token operator">:</span> NewMessageService
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotificationComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Self</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token literal-property property">msg</span><span class="token operator">:</span> MessageService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>msg<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>然而一般我们会将 @Self 与 @Optional 一起使用，以保证不会抛出异常，ng-zorro 中也将这类写法作为一种最佳实践。例如在 nz-tab-link 指令中</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Directive</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'a[nz-tab-link]'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">exportAs</span><span class="token operator">:</span> <span class="token string">'nzTabLink'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NzTabLinkDirective</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>
+    <span class="token parameter">@<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">Self</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> routerLink<span class="token operator">?</span><span class="token operator">:</span> RouterLink<span class="token punctuation">,</span> 
+    @<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">Self</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> routerLinkWithHref<span class="token operator">?</span><span class="token operator">:</span> RouterLinkWithHref</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样添加该指令的组件只会对自身的 routerLink 和 routerLinkWithHref 做捕获。</p> <h3 id="_3-skipself"><a href="#_3-skipself" class="header-anchor">#</a> 3.@SkipSelf</h3> <p>与 @Self 相反</p> <blockquote><p>使用 @SkipSelf()，Angular 在父 ElementInjector 中而不是当前 ElementInjector 中开始搜索服务</p></blockquote> <p>我们声明 ParentService 并在 container 组件中提供服务</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Injectable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">providedIn</span><span class="token operator">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ParentMessageService</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'come from parent'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'app-container'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">templateUrl</span><span class="token operator">:</span> <span class="token string">'./container.component.html'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">styleUrls</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./container.component.less'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> 
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span> 
+      <span class="token literal-property property">useClass</span><span class="token operator">:</span> ParentMessageService 
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ContainerComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>子组件中，我们已提供了服务，但是注入时使用了 @SkipSelf() 修饰符</p> <div class="language- extra-class"><pre class="language-text"><code>@Component({
+  selector: 'app-notification',
+  templateUrl: './notification.component.html',
+  styleUrls: ['./notification.component.less'],
+  providers: [
+    {
+      provide: MessageService,
+      useClass: NewMessageService
+    }
+  ]
+})
+export class NotificationComponent implements OnInit {
+  constructor(@SkipSelf() private msg: MessageService) {}
+
+  ngOnInit() {
+    this.msg.send();
+  }
+}
+</code></pre></div><p>最终可以看到使用的还是父组件内的服务</p> <p><img src="https://pic4.zhimg.com/80/v2-d882b1958feab004ab0a703869a9eadf_720w.jpg" alt="alt"></p> <h3 id="_4-host"><a href="#_4-host" class="header-anchor">#</a> 4.@Host</h3> <p>@Host() 修饰符的效果和 @Self() 修饰符的效果很类似，但是作用域的范围，或者说 host 所明确的范围和 @Self() 并不同，</p> <p>例如我们使用了 ng-content</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-container</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-notification</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-notification</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-container</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>这时服务来源于 ContainerComponent
+<img src="https://pic4.zhimg.com/80/v2-94f38bc807c55f79a13b4ca496b3f1fb_720w.png" alt="alt"></p> <p>或者使用 directive 时也是直接拿到使用该指令的组件中的服务</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-container</span> <span class="token attr-name">appHostTest</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-container</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><img src="https://pic3.zhimg.com/80/v2-b45e5a0dd47591d1102cb8753d7636f6_720w.png" alt="alt"></p> <p>在 ng-zorro 中也是大量使用 @Host() 而非 @Self()，在使用 @Host() 时最好也要与 @Optional() 搭配。</p> <h2 id="提供商"><a href="#提供商" class="header-anchor">#</a> 提供商</h2> <p>ClassProvider，ValueProvider 与 FactoryProvider 我们先来熟悉下这三个提供商，再谈谈应用。</p> <h3 id="_1-替代类提供商-classprovider"><a href="#_1-替代类提供商-classprovider" class="header-anchor">#</a> 1.替代类提供商 ClassProvider</h3> <p>我们常用的提供商配置</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    MessageService
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>其实是这类提供商的简写形式</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+      <span class="token literal-property property">useClass</span><span class="token operator">:</span> MessageService
+    <span class="token punctuation">}</span>	
+  <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>而替代类提供商可以让不同的类提供相同的服务，例如有个信息更为丰富的 NewMessageService 就可以很方便的替换原有的 MessageService。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+      <span class="token literal-property property">useClass</span><span class="token operator">:</span> NewMessageService
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>需要注意的是，如果你使用了下面的写法，会创建两个实例</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    NewMessageService<span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+	<span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+	<span class="token literal-property property">useClass</span><span class="token operator">:</span> NewMessageService
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-值提供商-valueprovider"><a href="#_2-值提供商-valueprovider" class="header-anchor">#</a> 2.值提供商 ValueProvider</h3> <p>有时候不一定要从类去创建对象，直接提供一个现有的对象也可以解决问题。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> MessageServiceValue <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">send</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'send message(value provider)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+      <span class="token literal-property property">useValue</span><span class="token operator">:</span> MessageServiceValue
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+	<span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>需要注意的是，不要使用一个 TypeScript 中的 interface 来作为 token，因为 interface 只在设计期才会存在（打包后不会存在 interface）。</p> <h3 id="_3-工厂提供商-factoryprovider"><a href="#_3-工厂提供商-factoryprovider" class="header-anchor">#</a> 3.工厂提供商 FactoryProvider</h3> <p>这里的工厂就是指工厂函数，既然是函数方式创建对象，那么就拥有了在运行期动态创建的能力。例如区分是否是生产模式来创建不同的对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">MessageServiceFactory</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>environment<span class="token punctuation">.</span>production<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MessageService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">NewMessageService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  <span class="token literal-property property">providers</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">provide</span><span class="token operator">:</span> MessageService<span class="token punctuation">,</span>
+      <span class="token literal-property property">useFactory</span><span class="token operator">:</span> MessageServiceFactory
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="预定义的-token-与多提供商-multi-参数"><a href="#预定义的-token-与多提供商-multi-参数" class="header-anchor">#</a> 预定义的 token 与多提供商（multi 参数）</h3> <p>这里可以理解为 Angular 应用某些操作的回调, <a href="https://indepth.dev/posts/1003/hooking-into-the-angular-bootstrap-process" target="_blank" rel="noopener noreferrer">进一步理解<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>PLATFORM_INITIALIZER：平台初始化之后调用的回调函数</li> <li>APP_BOOTSTRAP_LISTENER：每个启动组件启动完成后的回调函数</li> <li>APP_INITIALIZER：应用初始化之前的回调函数</li></ul> <p>多提供商机制可以使用一个令牌初始化多个提供商，方法就是设置 multi 参数为 true 即可。</p> <p>多提供商其实很多人都会用到，比如在设置 HTTP 拦截器时，除了使用默认拦截器之外，还希望再添加上 JWT 拦截器时，多提供商就可以很好的组织服务提供方式：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token constant">INTERCEPTOR_PROVIDES</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">provide</span><span class="token operator">:</span> <span class="token constant">HTTP_INTERCEPTORS</span><span class="token punctuation">,</span> <span class="token literal-property property">useClass</span><span class="token operator">:</span> DefaultInterceptor<span class="token punctuation">,</span> <span class="token literal-property property">multi</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> <span class="token literal-property property">provide</span><span class="token operator">:</span> <span class="token constant">HTTP_INTERCEPTORS</span><span class="token punctuation">,</span> <span class="token literal-property property">useClass</span><span class="token operator">:</span> JWTInterceptor<span class="token punctuation">,</span> <span class="token literal-property property">multi</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="ng-zorro-源码和-angular-官方文档的最佳实践"><a href="#ng-zorro-源码和-angular-官方文档的最佳实践" class="header-anchor">#</a> ng-zorro 源码和 Angular 官方文档的最佳实践</h2> <p>在 Angular 文档中有专门的一节内容 <a href="https://angular.cn/guide/dependency-injection-in-action" target="_blank" rel="noopener noreferrer">DI 实战<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，而本文的这部分内容则是通过知名开源 Angular 项目 ng-zorro 来对官方文档的实战篇做些补充，希望可以对各位有所启发。</p> <h3 id="_1-使用-optional-来让依赖是可选的-以及使用-host-限定服务方式"><a href="#_1-使用-optional-来让依赖是可选的-以及使用-host-限定服务方式" class="header-anchor">#</a> 1.使用 @Optional() 来让依赖是可选的，以及使用 @Host() 限定服务方式</h3> <p>这是官方推荐的 @Optional() + @Host() 的组合方式，</p> <p>举例：</p> <p>ng-zorro 中关闭动画的 directive nzNoAnimation 可能会被赋予到很多包含动画效果的组件上，拿自动补全组件 NzAutocompleteComponent 来说，构造函数中就会对 noAnimation 添加 @Host() 与 @Optional() 修饰符</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NzAutocompleteComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>
+    <span class="token parameter"><span class="token keyword">private</span> <span class="token literal-property property">changeDetectorRef</span><span class="token operator">:</span> ChangeDetectorRef<span class="token punctuation">,</span>
+    <span class="token keyword">private</span> <span class="token literal-property property">ngZone</span><span class="token operator">:</span> NgZone<span class="token punctuation">,</span>
+    @<span class="token function">Host</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> noAnimation<span class="token operator">?</span><span class="token operator">:</span> NzNoAnimationDirective</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在使用 noAnimation 时也会加上 ? 以免为 null</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+	<span class="token attr-name">...</span>
+  <span class="token attr-name">[nzNoAnimation]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>noAnimation?.nzNoAnimation<span class="token punctuation">&quot;</span></span>
+	<span class="token attr-name">...</span>
+  <span class="token attr-name">[@.disabled]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>noAnimation?.nzNoAnimation<span class="token punctuation">&quot;</span></span>
+<span class="token punctuation">&gt;</span></span>
+...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_2-为你的-angular-应用提供丰富的配置项"><a href="#_2-为你的-angular-应用提供丰富的配置项" class="header-anchor">#</a> 2.为你的 Angular 应用提供丰富的配置项</h3> <p>在 ng-zorro 中包含很多的配置项用于定制组件样式及行为，比如 NZ_CONFIG，我们来瞧瞧它是怎么实现和使用的吧</p> <p>在 config.ts 中，我们找到 NG_CONFIG 的定义：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * User should provide an object implements this interface 
+ * to set global configurations.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">NZ_CONFIG</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InjectionToken</span><span class="token operator">&lt;</span>NzConfig<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">'nz-config'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>并且在 NzConfigService 中注入 NZ_CONFIG</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">providedIn</span><span class="token operator">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NzConfigService</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> configUpdated$ <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Subject</span><span class="token operator">&lt;</span>keyof NzConfig<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/** Global config holding property. */</span>
+  <span class="token keyword">private</span> <span class="token literal-property property">config</span><span class="token operator">:</span> NzConfig<span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token constant">NZ_CONFIG</span><span class="token punctuation">)</span> defaultConfig<span class="token operator">?</span><span class="token operator">:</span> NzConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>config <span class="token operator">=</span> defaultConfig <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  getConfigForComponent<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">NzConfigKey</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>componentName<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> NzConfig<span class="token punctuation">[</span><span class="token constant">T</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">[</span>componentName<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">getConfigChangeEventForComponent</span><span class="token punctuation">(</span>componentName<span class="token operator">:</span> NzConfigKey<span class="token punctuation">)</span><span class="token operator">:</span> Observable<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>configUpdated$<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+      <span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">n</span> <span class="token operator">=&gt;</span> n <span class="token operator">===</span> componentName<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">mapTo</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  set<span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token class-name">NzConfigKey</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>componentName<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> <span class="token literal-property property">value</span><span class="token operator">:</span> NzConfig<span class="token punctuation">[</span><span class="token constant">T</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">[</span>componentName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">[</span>componentName<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">...</span>value <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>configUpdated$<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span>componentName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在 alert 组件中注入 NzConfigService</p> <div class="language- extra-class"><pre class="language-text"><code>constructor(
+  public nzConfigService: NzConfigService,
+  private cdr: ChangeDetectorRef) 
+{
+  // 组件配置发生变化时，触发视图更新
+  this.nzConfigService
+    .getConfigChangeEventForComponent(NZ_CONFIG_COMPONENT_NAME)
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(() =&gt; {
+      this.cdr.markForCheck();
+    });
+}
+</code></pre></div><p>最后，用户想要使用时，可以通过这样来做：</p> <div class="language- extra-class"><pre class="language-text"><code>import { NgZorroAntdModule, NzConfig, NZ_CONFIG } from 'ng-zorro-antd';
+
+const ngZorroConfig: NzConfig = {
+  ...
+};
+
+@NgModule({
+  ...
+  providers: [
+    { provide: NZ_CONFIG, useValue: ngZorroConfig }
+  ],
+	...
+})
+export class AppModule {}
+</code></pre></div><p>从而实现全局配置</p> <p>上面我们用到了 InjectionToken 来生成 token，在 Angular 官方文档中，还为我们介绍了如何使用 InjectionToken 来封装浏览器内置的 API，比如 localStorage</p> <p>首先将 <code>localStorage</code> 改为可注入的 <code>BROWSER_STORAGE</code> token</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token constant">BROWSER_STORAGE</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InjectionToken</span><span class="token operator">&lt;</span>Storage<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token string">'Browser Storage'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	<span class="token literal-property property">providedIn</span><span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+	<span class="token function-variable function">factory</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> localStorage
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>之后声明 BrowserStorageService ，并注入 BROWSER_STORAGE</p> <div class="language-js extra-class"><pre class="language-js"><code>@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">providedIn</span><span class="token operator">:</span> <span class="token string">'root'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">BrowserStorageService</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Inject</span><span class="token punctuation">(</span><span class="token constant">BROWSER_STORAGE</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token literal-property property">storage</span><span class="token operator">:</span> Storage</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">get</span><span class="token punctuation">(</span>key<span class="token operator">:</span> string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">set</span><span class="token punctuation">(</span>key<span class="token operator">:</span> string<span class="token punctuation">,</span> <span class="token literal-property property">value</span><span class="token operator">:</span> string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">setItem</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">remove</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">key</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>storage<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-使用-self-和-skipself-来修改提供商的搜索方式"><a href="#_3-使用-self-和-skipself-来修改提供商的搜索方式" class="header-anchor">#</a> 3.使用 @Self() 和 @SkipSelf() 来修改提供商的搜索方式</h3> <p>@Self() 修饰符的很多作用都被 @Host() 修饰符所替代了，这里我们说一说 @SkipSelf() 在 ng-zorro 中的妙用</p> <p>使用 ng-zorro 模态框组件 nz-modal 的同学应该都知道 nz-modal 可以通过调用 NzModalService 的 closeAll() 方法来关闭所有的模态框，那这在 ng-zorro 中是如何做到的呢？</p> <p>我们首先看到 NzModalService 是调用了 NzModalControlService 的 closeAll()</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Closes all of the currently-open dialogs</span>
+<span class="token function">closeAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>modalControl<span class="token punctuation">.</span><span class="token function">closeAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>NzModalControlService 会去获取当前所有打开的模态框并依次关闭，这并不是通过某个全局变量来存储的，而是通过查找 injection 树来获取的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// Track singleton openModals array through over the injection tree</span>
+<span class="token keyword">get</span> <span class="token function">openModals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> NzModalRef<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parentService <span class="token operator">?</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parentService<span class="token punctuation">.</span>openModals <span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>rootOpenModals<span class="token operator">!</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>来瞧瞧 NzModalControlService 的构造函数中 parentService 的注入方法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">@<span class="token function">Optional</span><span class="token punctuation">(</span><span class="token punctuation">)</span> @<span class="token function">SkipSelf</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">private</span> <span class="token literal-property property">parentService</span><span class="token operator">:</span> NzModalControlService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>这里就是 @SkipSelf() 的使用方式，与 @Optional() 修饰符搭配可以查找到 Injection 树上所有的注入实例。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ng-zorro-admin-doc/guide/authority.html" class="prev">
+        权限验证
+      </a></span> <span class="next"><a href="/ng-zorro-admin-doc/guide/content.html">
+        内容映射
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/ng-zorro-admin-doc/assets/js/app.d8b87182.js" defer></script><script src="/ng-zorro-admin-doc/assets/js/2.93c2c88f.js" defer></script><script src="/ng-zorro-admin-doc/assets/js/16.f635ef53.js" defer></script>
+  </body>
+</html>
