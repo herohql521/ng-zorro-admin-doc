@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数值转人民币 | ng-zorro-admin</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/ng-zorro-admin-doc/favicon.ico">
+    <meta name="description" content="A magical angular admin">
+    
+    <link rel="preload" href="/ng-zorro-admin-doc/assets/css/0.styles.8efae98b.css" as="style"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/app.540cb8bb.js" as="script"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/2.93c2c88f.js" as="script"><link rel="preload" href="/ng-zorro-admin-doc/assets/js/12.61f6e42c.js" as="script"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/10.13d21296.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/11.a6281d1c.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/13.17f4628f.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/14.a2788c90.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/15.3add68da.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/16.f635ef53.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/17.b3b425b0.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/18.bf5a3795.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/19.ab32f2cd.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/20.7b14d97d.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/21.78a19862.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/3.4d0f4e78.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/4.4a47a965.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/5.57a5bf32.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/6.91e3552f.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/7.ba72b951.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/8.ab91c015.js"><link rel="prefetch" href="/ng-zorro-admin-doc/assets/js/9.3b3d662d.js">
+    <link rel="stylesheet" href="/ng-zorro-admin-doc/assets/css/0.styles.8efae98b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/ng-zorro-admin-doc/" class="home-link router-link-active"><!----> <span class="site-name">ng-zorro-admin</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ng-zorro-admin-doc/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="功能" class="dropdown-title"><span class="title">功能</span> <span class="arrow down"></span></button> <button type="button" aria-label="功能" class="mobile-dropdown-title"><span class="title">功能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/rich-editor/" class="nav-link">
+  富文本
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/go2top/" class="nav-link">
+  返回顶部
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/lodashjs/" class="nav-link">
+  lodashjs
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/utils/" class="nav-link">
+  utils
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ng-zorro-admin-doc/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="功能" class="dropdown-title"><span class="title">功能</span> <span class="arrow down"></span></button> <button type="button" aria-label="功能" class="mobile-dropdown-title"><span class="title">功能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          组件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/rich-editor/" class="nav-link">
+  富文本
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/go2top/" class="nav-link">
+  返回顶部
+</a></li></ul></li><li class="dropdown-item"><h4>
+          工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/lodashjs/" class="nav-link">
+  lodashjs
+</a></li><li class="dropdown-subitem"><a href="/ng-zorro-admin-doc/feater/utils/" class="nav-link">
+  utils
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/ng-zorro-admin-doc/feater/rich-editor.html" class="sidebar-link">富文本</a></li><li><a href="/ng-zorro-admin-doc/feater/go2top.html" class="sidebar-link">返回顶部</a></li><li><a href="/ng-zorro-admin-doc/feater/lodashjs.html" class="sidebar-link">lodashjs</a></li><li><a href="/ng-zorro-admin-doc/feater/utils.html" aria-current="page" class="active sidebar-link">utils</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="数值转人民币"><a href="#数值转人民币" class="header-anchor">#</a> 数值转人民币</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 转化成RMB元字符串
+ * @param number
+ * @param digits 当数字类型时，允许指定小数点后数字的个数，默认2位小数
+ */</span>
+<span class="token keyword">import</span><span class="token punctuation">{</span>yuan<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@utils'</span>
+ money <span class="token operator">=</span> <span class="token function">yuan</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// ¥200.00</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[innerHTML]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>money<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- ¥ 200.00 --&gt;</span>
+</code></pre></div><h3 id="全角转半角"><a href="#全角转半角" class="header-anchor">#</a> 全角转半角</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ *  @param {string}
+ */</span>
+<span class="token keyword">import</span><span class="token punctuation">{</span>ToCDB<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@utils'</span>
+<span class="token function">ToCDB</span><span class="token punctuation">(</span><span class="token string">'ｑｕａｎｊｉａｏ'</span><span class="token punctuation">)</span>
+<span class="token comment">//quanjiao</span>
+</code></pre></div><h3 id="格式化金额"><a href="#格式化金额" class="header-anchor">#</a> 格式化金额</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span><span class="token punctuation">{</span>moneyFormat<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@utils'</span>
+<span class="token comment">/**
+ * @param num  金额
+ * @param [format]  需保留的小数，不设置时原样输出
+ */</span>
+<span class="token function">moneyFormat</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>   <span class="token comment">//  &quot;3,000.00&quot;</span>
+</code></pre></div><h3 id="价格转换浮点型"><a href="#价格转换浮点型" class="header-anchor">#</a> 价格转换浮点型</h3> <p>把moneyFormat格式化后的金额转成number类型</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span><span class="token punctuation">{</span>rmoney<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@utils'</span>
+<span class="token function">rmoney</span><span class="token punctuation">(</span><span class="token string">'20,100'</span><span class="token punctuation">)</span> <span class="token comment">// 20100</span>
+</code></pre></div><h3 id="加密电话号码"><a href="#加密电话号码" class="header-anchor">#</a> 加密电话号码</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @param {string}  电话号码
+ */</span>
+<span class="token keyword">import</span><span class="token punctuation">{</span>phoneFormat<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@utils'</span>
+<span class="token function">phoneFormat</span><span class="token punctuation">(</span><span class="token string">'13181620271'</span><span class="token punctuation">)</span>
+<span class="token comment">//131****0271</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ng-zorro-admin-doc/feater/lodashjs.html" class="prev">
+        lodashjs
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/ng-zorro-admin-doc/assets/js/app.540cb8bb.js" defer></script><script src="/ng-zorro-admin-doc/assets/js/2.93c2c88f.js" defer></script><script src="/ng-zorro-admin-doc/assets/js/12.61f6e42c.js" defer></script>
+  </body>
+</html>
